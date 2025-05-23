@@ -71,3 +71,4 @@ void sendToEmail(BreachType breachType) {
             break;
     }
 }
+
