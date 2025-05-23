@@ -41,7 +41,7 @@ void sendHighTemperatureAlert(const char* recipient) {
     printf("Hi, the temperature is too high\n");
 }
 
-void sendToEmail(BreachType breachType) {
+void sendToMail(BreachType breachType) {
     const char* recipient = "a.b@c.com";
     if (breachType == TOO_LOW) {
         sendLowTemperatureAlert(recipient);
@@ -56,7 +56,7 @@ void sendAlert(BreachType breachType, AlertTarget alertTarget) {
             sendToController(breachType);
             break;
         case TO_EMAIL:
-            sendToEmail(breachType);
+            sendToMail(breachType);
             break;
     }
 }
